@@ -5,23 +5,24 @@ using UnityEngine;
 public class SeedStageScript : MonoBehaviour
 {
     public Sprite[] stages;
+    private int currentStageID = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        SetSprite(0);
+        SetSprite(currentStageID);
     }
 
     public void Update()
     {
         
     }
-
     public void SetSprite(int value) 
     {
-        if (value < stages.Length)
+        currentStageID = value;
+        if (currentStageID < stages.Length)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = stages[value];
+            gameObject.GetComponent<SpriteRenderer>().sprite = stages[currentStageID];
         }
     }
 }
