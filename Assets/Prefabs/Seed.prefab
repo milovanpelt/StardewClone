@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1361082754454377832}
   - component: {fileID: 3765635942978058698}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: Seed
   m_TagString: Seed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
