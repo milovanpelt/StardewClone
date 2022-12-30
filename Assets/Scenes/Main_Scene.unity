@@ -255,7 +255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayText: {fileID: 302661407}
-  dayCount: 0
 --- !u!4 &207655376
 Transform:
   m_ObjectHideFlags: 0
@@ -524,29 +523,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1928529953}
-  - component: {fileID: 1928529952}
+  - component: {fileID: 1928529954}
   m_Layer: 0
-  m_Name: TileSpawner
+  m_Name: SeedSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1928529952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928529951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4deaebe49a2bda43860699a96863fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colums: 7
-  rows: 7
-  tileObject: {fileID: 5568879032963891190, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
 --- !u!4 &1928529953
 Transform:
   m_ObjectHideFlags: 0
@@ -562,3 +546,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928529954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928529951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4deaebe49a2bda43860699a96863fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colums: 7
+  rows: 7
+  tileObject: {fileID: 5568879032963891190, guid: fe485a5179920bb488d8d341afa044c6, type: 3}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileSpawnScript : MonoBehaviour
+public class SeedSpawnScript : MonoBehaviour
 {
     public int colums = 0;
     public int rows = 0;
