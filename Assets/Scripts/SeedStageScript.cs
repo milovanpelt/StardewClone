@@ -13,7 +13,7 @@ public class SeedStageScript : MonoBehaviour
         SetSprite(currentStageID);
     }
 
-    public void Update()
+    void Update()
     {
         
     }

@@ -14,7 +14,7 @@ public class LogicScript : MonoBehaviour
     {
         seeds = GameObject.FindGameObjectsWithTag("Seed");
     }
-    public void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
