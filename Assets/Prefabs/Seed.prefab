@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b85bfd4ed9d5589478781380ad142309, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3765635942978058698
@@ -97,9 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b697bfba2ff2b844588484f39e3671c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stages:
-  - {fileID: 21300000, guid: 9082767b0b3432e4793651ef0711ce2d, type: 3}
-  - {fileID: 21300000, guid: d6c6b60dca252164199d873dfefaffda, type: 3}
-  - {fileID: 21300000, guid: 40fb2a1101b0d134da7a66bcd513560d, type: 3}
-  - {fileID: 21300000, guid: f657f4edd970a2742addab2869c39072, type: 3}
-  - {fileID: 21300000, guid: 32f242944c8e5d94b908e96bb6628fb8, type: 3}
+  stages: []
