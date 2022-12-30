@@ -305,8 +305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -603.2, y: 460}
-  m_SizeDelta: {x: 160, y: 54.8}
+  m_AnchoredPosition: {x: -581.4, y: 427}
+  m_SizeDelta: {x: 160, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302661407
 MonoBehaviour:
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13171947, g: 0.754717, b: 0.13171947, a: 1}
+  m_Color: {r: 0.14901961, g: 0.7647059, b: 0.16470589, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -329,12 +329,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_Font: {fileID: 12800000, guid: a71120ebd9af08942bbe6b283bad597e, type: 3}
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 45
+    m_MaxSize: 90
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -469,8 +469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -709.8, y: 460}
-  m_SizeDelta: {x: 160, y: 55.2}
+  m_AnchoredPosition: {x: -709.8, y: 430}
+  m_SizeDelta: {x: 190, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1668614282
 MonoBehaviour:
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.12041651, g: 0.6226415, b: 0.15194674, a: 1}
+  m_Color: {r: 0.1477839, g: 0.764151, b: 0.16246954, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -493,12 +493,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_Font: {fileID: 12800000, guid: a71120ebd9af08942bbe6b283bad597e, type: 3}
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 93
+    m_MinSize: 5
+    m_MaxSize: 109
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -558,6 +558,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4deaebe49a2bda43860699a96863fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colums: 7
   rows: 7
-  tileObject: {fileID: 5568879032963891190, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+  colums: 7
+  seeds:
+  - {fileID: 877677456743117984, guid: 22db9dc0431a9a44ab9fae44b4040f77, type: 3}
+  - {fileID: 3835513330708457525, guid: aa5a853b57a541a4ca7a11d47d15e518, type: 3}
+  camera: {fileID: 519420032}

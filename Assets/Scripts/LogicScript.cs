@@ -8,11 +8,11 @@ public class LogicScript : MonoBehaviour
 {
     public Text dayText;
     private int dayCount = 0;
-    private GameObject[] seeds;
+    private GameObject[] seedTags;
 
     void Start()
     {
-        seeds = GameObject.FindGameObjectsWithTag("Seed");
+        seedTags = GameObject.FindGameObjectsWithTag("Seed");
     }
     void Update()
     {
@@ -21,7 +21,7 @@ public class LogicScript : MonoBehaviour
             dayCount++;
             dayText.text = dayCount.ToString();
 
-            foreach (GameObject item in seeds)
+            foreach (GameObject item in seedTags)
             {
                 item.GetComponent<SeedStageScript>().SetSprite(dayCount);
             }
