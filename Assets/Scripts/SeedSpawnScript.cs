@@ -7,7 +7,7 @@ public class SeedSpawnScript : MonoBehaviour
     public int rows = 0;
     public int colums = 0;
     public GameObject[] seeds;
-    public Transform camera;
+    public Transform cameraTransform;
 
     void Awake()
     {
@@ -16,6 +16,7 @@ public class SeedSpawnScript : MonoBehaviour
 
     void GenerateField() 
     {
+        // Generate field of seeds
         for (int x = 0; x < rows; x++)
         {
             for (int y = 0; y < colums; y++)
@@ -34,6 +35,6 @@ public class SeedSpawnScript : MonoBehaviour
             }
         }
 
-        camera.transform.position = new Vector3((float)rows / 2 - 0.5f, (float)colums / 2 - 0.5f, -10);
+        cameraTransform.transform.position = new Vector3((float)rows / 2 - 0.5f, (float)colums / 2 - 0.5f, -10);
     }
 }
