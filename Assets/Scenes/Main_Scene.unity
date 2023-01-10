@@ -563,4 +563,4 @@ MonoBehaviour:
   seeds:
   - {fileID: 877677456743117984, guid: 22db9dc0431a9a44ab9fae44b4040f77, type: 3}
   - {fileID: 3835513330708457525, guid: aa5a853b57a541a4ca7a11d47d15e518, type: 3}
-  camera: {fileID: 519420032}
+  cameraTransform: {fileID: 519420032}
