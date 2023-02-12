@@ -8,17 +8,18 @@ public class SeedStageScript : MonoBehaviour
     public int totalGrowDays = 0;
     private int currentStageID = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         SetSprite(currentStageID);
     }
 
-    void Update()
-    {
-        
+    public void NextStage() 
+    { 
+        currentStageID++;
+        SetSprite(currentStageID);
     }
-    public void SetSprite(int value) 
+
+    private void SetSprite(int value) 
     {
         int lastSprite = spriteStages.Length - 1;
         if (value < lastSprite)

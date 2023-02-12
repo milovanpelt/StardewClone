@@ -21,12 +21,14 @@ public class LogicScript : MonoBehaviour
         {
             // Increase the day when pressing spacebar
             dayCount++;
+
+            // Set text to current dayCount
             dayText.text = dayCount.ToString();
 
             // Set seed stage equal to current day
             foreach (GameObject item in seedTags)
             {
-                item.GetComponent<SeedStageScript>().SetSprite(dayCount);
+                item.GetComponent<SeedStageScript>().NextStage();
             }
         }
 
