@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
       propertyPath: totalGrowDays
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
       propertyPath: stages.Array.size
@@ -73,6 +73,34 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: faa22975b53bfb6458be8e974f5b70c6, type: 3}
     - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
       propertyPath: stages.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: b2248faca93319b4aa6bbe2ecf91067f, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: spriteStages.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: spriteStages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 15c1134f9962eb944b4fd8f084b7117d, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: spriteStages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a1a191c9a3bcf545bf91b8f6ff2e89d, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: spriteStages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 244f439e7638dc54d8725756c5758c13, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: spriteStages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ea33f3416432b642863b5dee25afbe7, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: spriteStages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: faa22975b53bfb6458be8e974f5b70c6, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: spriteStages.Array.data[5]
       value: 
       objectReference: {fileID: 21300000, guid: b2248faca93319b4aa6bbe2ecf91067f, type: 3}
     - target: {fileID: 5568879032963891190, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
