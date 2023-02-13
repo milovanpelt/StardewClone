@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -13,89 +14,56 @@ public struct SeedStage
 public class SeedStageScript : MonoBehaviour
 {
     public SeedStage[] seedStage;
-    private bool isWatered = false;
-    private int currentStageID = 0;
-    private int lastSpriteIndex = 0;
+    private int currentStageIndex = 0;
+    private int lastStageIndex = 0;
 
-    private List<int> growNumbers = new List<int>();
-    private int totalStages = 0;
-    private int count = 0;
+    private bool isWatered = false;
+    private int daysPassed = 0;
+
     void Start()
     {
-        int currentGrowNumber = 0;
+        // Set current sprite (default)
+        SetSprite(seedStage[currentStageIndex].seedSprite_Default);
 
-        // Total stages is equal to the length of the SeedStage array
-        totalStages = seedStage.Length;
-
-        // Set currentStage to 0
-        SetSprite(currentStageID);
-
-        for (int i = 0; i < seedStage.Length; i++)
-        {
-            // Create list of the growNumbers
-            if (i >= 0 && i < seedStage.Length - 1)
-            {
-                if (seedStage[i].GrowDays == 0) 
-                { 
-                    currentGrowNumber += 1;
-                }
-                else 
-                { 
-                    currentGrowNumber += seedStage[i].GrowDays; 
-                }
-                
-                growNumbers.Add(currentGrowNumber);
-            }
-        }
-
-        lastSpriteIndex = totalStages - 1;
+        // Set last stage index
+        lastStageIndex = seedStage.Length - 1;
     }
 
     public void WaterSeed() 
     {
-        if (currentStageID != lastSpriteIndex)
+        // Only water if the last stage has not been reached
+        if (currentStageIndex != lastStageIndex)
         {
             isWatered = true;
-            SetSprite(currentStageID);
+            SetSprite(seedStage[currentStageIndex].seedSprite_Watered);
         }
     }
     public void NextStage() 
     {
-        if (currentStageID < growNumbers.Count)
+        // Do nothing if seed is not watered
+        if (!isWatered) 
         {
-            if (!isWatered)
-            {
-                return;
-            }
-
-            count++;
-            if (count == growNumbers[currentStageID])
-            {
-                currentStageID++;
-            }
-            else if (currentStageID == lastSpriteIndex)
-            {
-                currentStageID = lastSpriteIndex;
-            }
-
-            isWatered = false;
-            SetSprite(currentStageID);
-            
+            return;
         }
+
+        // Check if days that passed equals the days of growth for each stage
+        daysPassed++;
+        if (daysPassed == seedStage[currentStageIndex].GrowDays) 
+        {
+
+            currentStageIndex++;
+
+            // Reset daysPassed 
+            daysPassed = 0;
+        }
+
+        // Reset seeds being watered
+        isWatered = false;
+        SetSprite(seedStage[currentStageIndex].seedSprite_Default);
     }
 
-    private void SetSprite(int value)
+    private void SetSprite(Sprite newSprite)
     {
-        Sprite newSprite = null;
-        if (isWatered) 
-        {
-            newSprite = seedStage[value].seedSprite_Watered;
-        }
-        else
-        {
-            newSprite = seedStage[value].seedSprite_Default;
-        }
-
         gameObject.GetComponent<SpriteRenderer>().sprite = newSprite;
     }
 }
