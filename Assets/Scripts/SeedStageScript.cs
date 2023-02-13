@@ -5,13 +5,15 @@ using UnityEngine;
 [System.Serializable]
 public struct SeedStage
 {
-    public Sprite seedSprite;
+    public Sprite seedSprite_Default;
+    public Sprite seedSprite_Watered;
     public int GrowDays;
 }
 
 public class SeedStageScript : MonoBehaviour
 {
     public SeedStage[] seedStage;
+    private bool isWatered = false;
     private int currentStageID = 0;
     private int lastSpriteIndex = 0;
 
@@ -49,10 +51,24 @@ public class SeedStageScript : MonoBehaviour
         lastSpriteIndex = totalStages - 1;
     }
 
+    public void WaterSeed() 
+    {
+        if (currentStageID != lastSpriteIndex)
+        {
+            isWatered = true;
+            SetSprite(currentStageID);
+        }
+    }
     public void NextStage() 
     {
         if (currentStageID < growNumbers.Count)
         {
+            if (!isWatered)
+            {
+                Debug.Log("Plant: " + gameObject.name + " not watered");
+                return;
+            }
+
             count++;
             if (count == growNumbers[currentStageID])
             {
@@ -63,12 +79,24 @@ public class SeedStageScript : MonoBehaviour
                 currentStageID = lastSpriteIndex;
             }
 
+            isWatered = false;
             SetSprite(currentStageID);
+            
         }
     }
 
     private void SetSprite(int value)
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = seedStage[value].seedSprite;
+        Sprite newSprite = null;
+        if (isWatered) 
+        {
+            newSprite = seedStage[value].seedSprite_Watered;
+        }
+        else
+        {
+            newSprite = seedStage[value].seedSprite_Default;
+        }
+
+        gameObject.GetComponent<SpriteRenderer>().sprite = newSprite;
     }
 }

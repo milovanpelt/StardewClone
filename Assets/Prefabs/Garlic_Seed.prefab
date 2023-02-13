@@ -16,6 +16,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1437609785487284412, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437609785487284412, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.5
       objectReference: {fileID: 0}
@@ -42,6 +46,10 @@ PrefabInstance:
     - target: {fileID: 1437609785487284412, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: isWatered
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
       propertyPath: totalGrowDays
@@ -139,6 +147,66 @@ PrefabInstance:
       propertyPath: seedStage.Array.data[4].seedSprite
       value: 
       objectReference: {fileID: 21300000, guid: b08032a2667381141a108940f68692eb, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[0].seedSprite_Normal
+      value: 
+      objectReference: {fileID: 21300000, guid: 25021aa08f5baf0489a30a4028d14be4, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[1].seedSprite_Normal
+      value: 
+      objectReference: {fileID: 21300000, guid: ed422a597bd0c364c9f3d6f0b22d6b3f, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[2].seedSprite_Normal
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d15a7ac8902c89439f28e0408bbf329, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[3].seedSprite_Normal
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fa40db75e2d1eb4580c03f6a1b43631, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[4].seedSprite_Normal
+      value: 
+      objectReference: {fileID: 21300000, guid: b08032a2667381141a108940f68692eb, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[0].seedSprite_Default
+      value: 
+      objectReference: {fileID: 21300000, guid: 25021aa08f5baf0489a30a4028d14be4, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[0].seedSprite_Watered
+      value: 
+      objectReference: {fileID: 21300000, guid: 5cd8ec2c969d37047ba08c607a442640, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[1].seedSprite_Default
+      value: 
+      objectReference: {fileID: 21300000, guid: ed422a597bd0c364c9f3d6f0b22d6b3f, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[1].seedSprite_Watered
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e92306de16dd6742b63f6ba3042e414, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[2].seedSprite_Default
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d15a7ac8902c89439f28e0408bbf329, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[2].seedSprite_Watered
+      value: 
+      objectReference: {fileID: 21300000, guid: 8454076c4affc8148afa16f2c8d3cda6, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[3].seedSprite_Default
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fa40db75e2d1eb4580c03f6a1b43631, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[3].seedSprite_Watered
+      value: 
+      objectReference: {fileID: 21300000, guid: 516bdf7a65daa6e448dcc33f8ebb33ba, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[4].seedSprite_Default
+      value: 
+      objectReference: {fileID: 21300000, guid: b08032a2667381141a108940f68692eb, type: 3}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[4].seedSprite_Watered
+      value: 
+      objectReference: {fileID: 21300000, guid: 4eca898e425843e4f970dcb2a39f0cc0, type: 3}
     - target: {fileID: 5568879032963891190, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
       propertyPath: m_Name
       value: Garlic_Seed

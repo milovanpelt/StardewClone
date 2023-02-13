@@ -32,6 +32,14 @@ public class LogicScript : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.E)) 
+        {
+            foreach (GameObject item in seedTags)
+            {
+                item.GetComponent<SeedStageScript>().WaterSeed();
+            }
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             // Ray cast from mouse to screen in 2D
@@ -40,10 +48,10 @@ public class LogicScript : MonoBehaviour
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 
-            // Destroy seed when hit
+            // Water seed when clicking it
             if (hit.collider != null)
             {
-                Destroy(hit.collider.gameObject);
+                hit.collider.gameObject.GetComponent<SeedStageScript>().WaterSeed();
             }
         }
     }
