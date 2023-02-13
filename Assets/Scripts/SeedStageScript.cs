@@ -11,8 +11,18 @@ public struct SeedStage
     public int GrowDays;
 }
 
+[System.Serializable]
+public enum Season
+{
+    Spring,
+    Summer,
+    Fall,
+    Winter
+}
+
 public class SeedStageScript : MonoBehaviour
 {
+    public Season seasons;
     public SeedStage[] seedStage;
     private int currentStageIndex = 0;
     private int lastStageIndex = 0;
