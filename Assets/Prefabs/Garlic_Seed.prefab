@@ -116,6 +116,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
+      propertyPath: seedStage.Array.data[4].GrowDays
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765635942978058698, guid: fe485a5179920bb488d8d341afa044c6, type: 3}
       propertyPath: seedStage.Array.data[0].seedSprite
       value: 
       objectReference: {fileID: 21300000, guid: 25021aa08f5baf0489a30a4028d14be4, type: 3}

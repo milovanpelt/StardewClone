@@ -19,13 +19,13 @@ public class LogicScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Increase the day when pressing spacebar
+            // Increase the day
             dayCount++;
 
-            // Set text to current dayCount
+            // Set text UI to current dayCount
             dayText.text = dayCount.ToString();
 
-            // Set seed stage equal to current day
+            // Set next stage for each seed
             foreach (GameObject item in seedTags)
             {
                 item.GetComponent<SeedStageScript>().NextStage();
