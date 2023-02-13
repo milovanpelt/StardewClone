@@ -40,7 +40,7 @@ public class LogicScript : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             // Ray cast from mouse to screen in 2D
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

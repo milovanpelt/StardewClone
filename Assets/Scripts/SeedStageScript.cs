@@ -65,7 +65,6 @@ public class SeedStageScript : MonoBehaviour
         {
             if (!isWatered)
             {
-                Debug.Log("Plant: " + gameObject.name + " not watered");
                 return;
             }
 
