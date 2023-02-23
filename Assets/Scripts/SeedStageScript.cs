@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
+using Unity.VisualScripting;
+using System;
+using UnityEngine.Windows;
+
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 [System.Serializable]
 public struct SeedStage
@@ -10,6 +19,7 @@ public struct SeedStage
     public Sprite seedSprite_Watered;
     public int GrowDays;
 }
+
 
 [System.Serializable]
 public enum Season
@@ -24,6 +34,20 @@ public class SeedStageScript : MonoBehaviour
 {
     public Season seasons;
     public SeedStage[] seedStage;
+
+    // Regrow variables
+    [HideInInspector]
+    public bool canRegrow = false;
+    
+    [HideInInspector]
+    public Sprite RegrowSprite_Default;
+
+    [HideInInspector]
+    public Sprite RegrowSprite_Watered;
+
+    [HideInInspector]
+    public int RegrowDays;
+
     private int currentStageIndex = 0;
     private int lastStageIndex = 0;
 
@@ -77,3 +101,40 @@ public class SeedStageScript : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = newSprite;
     }
 }
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(SeedStageScript))]
+public class RandomScript_Editor : Editor
+{
+    SerializedObject stage;
+
+    public override void OnInspectorGUI()
+    {
+     
+
+        DrawDefaultInspector(); // for other non-HideInInspector fields
+
+        SeedStageScript script = (SeedStageScript)target;
+
+        // draw checkbox for the bool
+        script.canRegrow = EditorGUILayout.Toggle("Can regrow", script.canRegrow);
+        if (script.canRegrow) // if bool is true, show other fields
+        {
+            // (Default) Regrow sprite field
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.PrefixLabel("RegrowSprite_Default");
+            script.RegrowSprite_Default = (Sprite)EditorGUILayout.ObjectField(script.RegrowSprite_Default, typeof(Sprite), allowSceneObjects: true);
+            EditorGUILayout.EndHorizontal();
+
+            // (Watered) Regrow sprite field
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.PrefixLabel("RegrowSprite_Watered");
+            script.RegrowSprite_Watered = (Sprite)EditorGUILayout.ObjectField(script.RegrowSprite_Watered, typeof(Sprite), allowSceneObjects: true);
+            EditorGUILayout.EndHorizontal();
+
+            // Regrow days
+            script.RegrowDays = EditorGUILayout.IntField("RegrowDays", script.RegrowDays);
+        }
+    }
+}
+#endif
